@@ -1,0 +1,311 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Action Coming Soon Responsive Widget Template : W3layouts</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style2.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" />
+
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="w3l-coming-soon-page">
+        <div class="coming-page-info-6">
+            <div class="wrapper">
+                <div class="">
+                    <marquee behavior="scroll" direction="left" scrollamount="6" class="font-weight-bold" style="color: yellow; font-size: 35px;">Securisé vos comptes blablablabla</marquee>
+                    <!-- <div class="logo">
+                        <a class="brand-logo" href="index.html"><span class="fa fa-headphones"></span> Action</a>
+                    </div> -->
+                    <!-- <div class="button text-right">
+                        <a href="#contact" class="btn contacts">Contacter-Nous</a>
+                    </div> -->
+                </div>
+                <div class="coming-block">
+                    <h4>Action</h4>
+                    <h1>Recharge <br> Illimité</h1>
+                    <div class="countdown">
+                        <div class="countdown__days">
+                            <div class="number"></div>
+                            <span class>Days</span>
+                        </div>
+
+                        <div class="countdown__hours">
+                            <div class="number"></div>
+                            <span class>Hours</span>
+                        </div>
+
+                        <div class="countdown__minutes">
+                            <div class="number"></div>
+                            <span class>Minutes</span>
+                        </div>
+
+                        <div class="countdown__seconds">
+                            <div class="number"></div>
+                            <span class>Seconds d'existance</span>
+                        </div>
+
+                    </div>
+                    <form action="#" method="post">
+                        <!-- <p>Notify me when there’s some action:</p>
+                        <div class="input">
+                            <input type="email" placeholder="Email Address" required="">
+                        </div> -->
+                        <div class="button">
+                            <button class="btn">Recharger</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="copyright-footer">
+                    <div class="w3l-copy-right-left">
+                        <p>© 2020 Action. Made with <span class="fa fa-heart"></span> | Designed by <a href="https://w3layouts.com" target="_blank">W3layouts</a></p>
+                    </div>
+                    <div class="w3l-copy-right">
+                        <ul class="social">
+                            <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
+                            <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
+                            <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
+                            <li><a href="#google"><span class="fa fa-google" aria-hidden="true"></span></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            (() => {
+                // Specify the deadline date
+                const deadlineDate = new Date('December 31, 2055 23:59:59').getTime();
+
+                // Cache all countdown boxes into consts
+                const countdownDays = document.querySelector('.countdown__days .number');
+                const countdownHours = document.querySelector('.countdown__hours .number');
+                const countdownMinutes = document.querySelector('.countdown__minutes .number');
+                const countdownSeconds = document.querySelector('.countdown__seconds .number');
+
+                // Update the count down every 1 second (1000 milliseconds)
+                setInterval(() => {
+                    // Get current date and time
+                    const currentDate = new Date().getTime();
+
+                    // Calculate the distance between current date and time and the deadline date and time
+                    const distance = deadlineDate - currentDate;
+
+                    // Calculations the data for remaining days, hours, minutes and seconds
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Insert the result data into individual countdown boxes
+                    countdownDays.innerHTML = days;
+                    countdownHours.innerHTML = hours;
+                    countdownMinutes.innerHTML = minutes;
+                    countdownSeconds.innerHTML = seconds;
+                }, 1000);
+            })();
+        </script>
+
+    </section>
+    <!-- //coming-61-w3l-vv-section -->
+    <!-- //banner-botttom -->
+    <section class="content-info py-5">
+        <div class="container py-md-5">
+
+            <h3 class="title-w3ls mb-5 text-center">Qui sommes-Nous</h3>
+            <div class="row">
+                <!-- left side -->
+                <div class="col-lg-12 single-left">
+                    <div class="single-left1">
+                        <h5 class="card-title">
+                            Nous existons pour facilier les recharges
+                        </h5>
+                        <p>CONFIRMATION ET AUTHENTIFICATION DES RECHARGES (TRANS-CASH ,PCS, NEO-SURF)
+                        </p>
+                        <div class="mt-4">
+                            <span class="badge badge-primary">Posted 2019-04-02 10:05:00</span>
+                            <div class="float-sm-right">
+                                <a href="#" class="badge badge-primary">story</a>
+                                <a href="#" class="badge badge-secondary">personal</a>
+                                <a href="#" class="badge badge-success">social</a>
+                                <a href="#" class="badge badge-danger">info</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <img src="images/Transcash.png" alt=" " class="img-fluid" />
+                        <ul class="courses_list my-4">
+                            <li>
+                                <h6 class="courses-first text-bl">
+                                    <span class="fa fa-user mr-2"></span>Jenny Joy
+                                </h6>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-heart mr-1"></span> 22
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-comments mr-1"></span> 16
+                                </a>
+                            </li>
+                        </ul>
+                        <h5 class="card-title">
+                            <a href="single.html" class="text-bl">Sed ut perspiciatis unde omnis iste.</a>
+                        </h5>
+                        <p>In consectetur, elit in scelerisque malesuada, tellus leo viverra massa, nec malesuada turpis lectus ac urna. Suspendisse ut neque orci. Phasellus tellus diam, pulvinar sit amet elit sit amet.
+                        </p>
+                        <p>fermentum viverra eros. Praesent neque purus, rhoncus nec nibh non, mollis sodales odio. Nullam facilisis diam non magna porta luctus. Aenean facilisis erat posuere erat ornare ultrices. Aliquam ac arcu interdum, dapibus nibh convallis,
+                            semper augue.
+                        </p>
+                    </div>
+                    <div class="admin p-4 my-4">
+                        <p>
+                            <span class="fa fa-quote-left mr-2"></span>nibh eu consequat magna ipsum ac ex. Nulla iaculis tincidunt elit, tortor luctus sit amet. Morbi in porta dolor. Morbi eget dui elit. consequat magna ipsum ac ex, Nulla iaculis consequat
+                            magna ipsum ac ex Nulla iaculis.
+                            <span class="fa fa-quote-right ml-2"></span>
+                        </p>
+                        <a href="#" class="mt-3 font-weight-bold text-right blockquote-footer">Citations de James Doe</a>
+                    </div>
+
+                    <div class="comments my-5">
+                        <h3 class="courses-title ">Témoignage recents</h3>
+                        <div class="comments-grids mt-4">
+                            <div class="media mt-4">
+                                <img class="mr-3" src="images/te1.jpg" class="img-fluid media-img" alt="image">
+                                <div class="media-body comments-grid-right">
+                                    <h4>Johnson</h4>
+                                    <ul class="my-2">
+                                        <li class="font-weight-bold">2 Apr 2019
+                                            <i>|</i>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="font-weight-bold">Reply</a>
+                                        </li>
+                                    </ul>
+                                    <p>mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec purus quis tempor. Phasellus bibendum eu.</p>
+                                </div>
+                            </div>
+                            <div class="media mt-sm-5 mt-3">
+                                <a class="pr-3" href="#">
+                                    <img src="images/te2.jpg" class="img-fluid media-img" alt="image">
+                                </a>
+                                <div class="media-body comments-grid-right">
+                                    <h4>Watson</h4>
+                                    <ul class="my-2">
+                                        <li class="font-weight-bold">2 Apr 2019
+                                            <i>|</i>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="font-weight-bold">Reply</a>
+                                        </li>
+                                    </ul>
+                                    <p>mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec purus quis tempor. Phasellus bibendum eu.</p>
+                                </div>
+                            </div>
+                            <div class="media mt-4">
+                                <img class="mr-3" src="images/te1.jpg" class="img-fluid media-img" alt="image">
+                                <div class="media-body comments-grid-right">
+                                    <h4>Johnson</h4>
+                                    <ul class="my-2">
+                                        <li class="font-weight-bold">2 Apr 2019
+                                            <i>|</i>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="font-weight-bold">Reply</a>
+                                        </li>
+                                    </ul>
+                                    <p>mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec purus quis tempor. Phasellus bibendum eu.</p>
+                                </div>
+                            </div>
+                            <div class="media mt-4">
+                                <img class="mr-3" src="images/te1.jpg" class="img-fluid media-img" alt="image">
+                                <div class="media-body comments-grid-right">
+                                    <h4>Johnson</h4>
+                                    <ul class="my-2">
+                                        <li class="font-weight-bold">2 Apr 2019
+                                            <i>|</i>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="font-weight-bold">Reply</a>
+                                        </li>
+                                    </ul>
+                                    <p>mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec purus quis tempor. Phasellus bibendum eu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leave-coment-form text-left">
+                        <div class="mm_single_submit">
+                            <button type="submit" class="btn">Recharger</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- //left side -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- //banner-botttom -->
+    <div class="copy-right">
+        <div class="container">
+            <div class="row">
+                <p class="copy-right-grids text-md-left text-center my-sm-4 my-4 col-md-6">© Repay. All Rights Reserved |
+                </p>
+                <div class="w3-pvt-footer text-md-right text-center mt-4 col-md-5">
+                    <ul class="list-unstyled w3-pvt-icons">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-dribbble"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-vk"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="move-top text-right col-md-1">
+                    <a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
