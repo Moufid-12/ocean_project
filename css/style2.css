@@ -39,7 +39,6 @@ input[type="search"] {
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
     font-family: 'Catamaran', sans-serif;
-
 }
 
 h1,
@@ -66,8 +65,12 @@ ul {
     padding: 0;
 }
 
+
 /*-- header --*/
+
+
 /* banner style */
+
 .banner_w3pvt {
     position: relative;
     z-index: 1;
@@ -116,7 +119,6 @@ ul {
     color: #fff;
     font-weight: 600;
     line-height: 1em;
-
 }
 
 .banner-info h4 {
@@ -191,15 +193,17 @@ ul {
     color: #fff;
     letter-spacing: 3px;
     margin: 1em 0;
-
-
 }
+
 
 /*-- //banner style --*/
 
 
 /* header */
+
+
 /* CSS Document */
+
 .w3pvt-bg {
     background: #fff;
     padding: 1.5em;
@@ -221,7 +225,6 @@ ul {
 
 div#logo h1 span {
     color: #fdbd10;
-
     vertical-align: middle;
 }
 
@@ -237,7 +240,9 @@ header {
     display: none;
 }
 
+
 /* Giving a background-color to the nav container. */
+
 nav {
     margin: 0;
     padding: 0;
@@ -253,8 +258,10 @@ nav:after {
     clear: both;
 }
 
+
 /* Removing padding, margin and "list-style" from the "ul",
  * and adding "position:reltive" */
+
 nav ul {
     float: right;
     padding: 0;
@@ -264,14 +271,17 @@ nav ul {
     margin-top: 0.5em;
 }
 
-/* Positioning the navigation items inline */
-nav ul li {
 
+/* Positioning the navigation items inline */
+
+nav ul li {
     display: inline-block;
     float: left;
 }
 
+
 /* Styling the links */
+
 nav a {
     font-weight: 400;
     color: #555;
@@ -282,12 +292,13 @@ nav a {
     margin: 0px 1.1em;
 }
 
-
 nav ul li ul li:hover {
     background: #f8f9fa;
 }
 
+
 /* Background color change on Hover */
+
 nav a:hover {
     color: #0066b2;
     background: transparent;
@@ -297,8 +308,10 @@ nav a:hover {
     color: #0066b2;
 }
 
+
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
+
 nav ul ul {
     display: none;
     position: absolute;
@@ -312,12 +325,16 @@ ul.inner-dropdown a:hover {
     color: #333;
 }
 
+
 /* Display Dropdowns on Hover */
-nav ul li:hover > ul {
+
+nav ul li:hover>ul {
     display: inherit;
 }
 
+
 /* Fisrt Tier Dropdown */
+
 nav ul ul li {
     width: 160px;
     float: none;
@@ -331,10 +348,12 @@ nav ul ul li a {
     display: block;
 }
 
+
 /* Second, Third and more Tiers	
  * We move the 2nd and 3rd etc tier dropdowns to the left
  * by the amount of the width of the first tier.
 */
+
 nav ul ul ul li {
     position: relative;
     top: -60px;
@@ -344,7 +363,8 @@ nav ul ul ul li {
 
 
 /* Change ' +' in order to change the Dropdown symbol */
-li > a:only-child:after {
+
+li>a:only-child:after {
     content: '';
 }
 
@@ -352,8 +372,7 @@ li > a:only-child:after {
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 992px) {
-
+@media all and (max-width: 992px) {
     #logo {
         display: block;
         padding: 0;
@@ -361,11 +380,9 @@ li > a:only-child:after {
         text-align: center;
         float: left;
     }
-
     nav {
         margin: 0;
     }
-
     .w3pvt-bg {
         padding: 1em;
         display: flex;
@@ -373,18 +390,15 @@ li > a:only-child:after {
         width: 65%;
         justify-content: center;
     }
-
     nav ul {
         width: 100%;
     }
-
     /* Hide the navigation menu by default */
     /* Also hide the  */
-    .toggle + a,
+    .toggle+a,
     .menu {
         display: none;
     }
-
     /* Stylinf the toggle lable */
     .toggle {
         display: block;
@@ -400,7 +414,6 @@ li > a:only-child:after {
         border-radius: 4px;
         margin-right: 1em;
     }
-
     .menu .toggle {
         float: none;
         text-align: center;
@@ -413,20 +426,17 @@ li > a:only-child:after {
         background: none;
         color: #333;
     }
-
     .toggle:hover {
         color: #333;
         background-color: #fff;
     }
-
     /* Display Dropdown when clicked on Parent Lable */
-    [id^=drop]:checked + ul {
+    [id^=drop]:checked+ul {
         display: block;
         background: #e9ecef;
         padding: 15px 0;
         text-align: center;
     }
-
     /* Change menu item's width to 100% */
     nav ul li {
         display: block;
@@ -434,21 +444,17 @@ li > a:only-child:after {
         padding: 5px 0;
         margin: 0;
     }
-
     nav ul ul .toggle,
     nav ul ul a {
         padding: 0 40px;
     }
-
     nav ul ul ul a {
         padding: 0 80px;
     }
-
     nav a:hover,
     nav ul ul ul a {
         background-color: transparent;
     }
-
     nav ul li ul li .toggle,
     nav ul ul a,
     nav ul ul ul a {
@@ -456,7 +462,6 @@ li > a:only-child:after {
         color: #FFF;
         font-size: 17px;
     }
-
     /* Hide Dropdowns by Default */
     nav ul ul {
         float: none;
@@ -464,56 +469,45 @@ li > a:only-child:after {
         color: #ffffff;
         /* has to be the same number as the "line-height" of "nav a" */
     }
-
     /* Hide menus on hover */
-    nav ul ul li:hover > ul,
-    nav ul li:hover > ul {
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
         display: none;
     }
-
     /* Fisrt Tier Dropdown */
     nav ul ul li {
         display: block;
         width: 100%;
         padding: 0;
     }
-
     nav ul ul ul li {
         position: static;
         /* has to be the same number as the "width" of "nav ul ul li" */
-
     }
-
     nav a {
         color: #333;
     }
-
     nav a:hover {
         color: #333;
     }
-
     .menu li.active a {
         color: #333;
     }
-
     nav ul ul li a {
         display: inline-block;
         font-size: 15px;
     }
-
     ul.inner-dropdown {
         padding-bottom: 0 !important;
         padding-top: 8px !important;
     }
 }
 
-@media all and (max-width : 330px) {
-
+@media all and (max-width: 330px) {
     nav ul li {
         display: block;
         width: 94%;
     }
-
 }
 
 li.icons a {
@@ -539,7 +533,9 @@ li.icons a.dribble {
     background: #ea4c89;
 }
 
+
 /*-- // header --*/
+
 .banner-w3-pvt-top-icons li {
     display: inline-block;
     text-shadow: 3px 1px 3px rgba(45, 45, 45, 0.38);
@@ -564,8 +560,12 @@ li.icons a {
     color: #fff;
 }
 
+
 /*-- // header --*/
+
+
 /*-- /banner-bottom --*/
+
 .sub-vj {
     color: #777;
     font-size: 1em;
@@ -574,6 +574,7 @@ li.icons a {
 
 
 /*-- banner bottom --*/
+
 .bottom-grids h4 {
     font-size: 1.4em;
     text-transform: capitalize;
@@ -629,9 +630,15 @@ span.border-line {
     color: #34bf49;
 }
 
+
 /*-- //banner bottom --*/
+
+
 /*-- //banner-bottom --*/
+
+
 /*-- features --*/
+
 h3.title-w3ls,
 h3.title-w3ls.two {
     font-size: 3em;
@@ -646,7 +653,9 @@ h3.title-w3ls.two {
     background: #f7f7f7;
 }
 
+
 /*-- //features --*/
+
 .ab-content h4 {
     font-size: 1.2em;
     color: #4c4d4e;
@@ -666,7 +675,6 @@ ul.tic-info li {
     font-size: 0.9em;
     margin-bottom: 1.5em;
     letter-spacing: 1px;
-
 }
 
 .progress-bar-striped {
@@ -698,7 +706,9 @@ h4.progress-vj {
     margin-top: 3em;
 }
 
+
 /*-- /stats --*/
+
 .stats_w3-pvt_counter_grid span {
     font-size: 35px;
     margin-bottom: 0.7em;
@@ -718,9 +728,7 @@ p.counter {
 
 .prodct1 h4 strong {
     font-size: 1.4em;
-
 }
-
 
 .f1 {
     background: #0066b2;
@@ -738,7 +746,9 @@ p.counter {
     background: #ae63e4;
 }
 
+
 /*-- //stats --*/
+
 
 /* about */
 
@@ -785,7 +795,6 @@ p.counter {
 .s3 {
     color: #34bf49;
 }
-
 
 .s4 {
     color: #0dd3ff;
@@ -835,7 +844,10 @@ p.test span {
     box-shadow: none;
 }
 
+
 /* //about */
+
+
 /*-- products --*/
 
 .prodct1 span {
@@ -881,7 +893,10 @@ p.test span {
     -o-transform: scale(0.9);
 }
 
+
 /*-- //products --*/
+
+
 /*--mid --*/
 
 .mid-w3-pvt-content {
@@ -930,8 +945,8 @@ h4.tittle {
     max-width: 700px;
 }
 
-/*-- //mid --*/
 
+/*-- //mid --*/
 
 .page-w3pvt-inner {
     background: url(../images/banner1.jpg) no-repeat center;
@@ -948,7 +963,9 @@ h4.tittle {
     background: rgba(0, 0, 0, 0.44);
 }
 
+
 /*-- blog --*/
+
 .blog-info h4 {
     text-transform: capitalize;
     line-height: 36px;
@@ -962,7 +979,6 @@ h4.tittle {
     letter-spacing: 1px;
     color: #777;
 }
-
 
 ul.blog-icons li {
     display: inline-block;
@@ -991,9 +1007,12 @@ ul.blog-icons span {
     color: #6a7279;
 }
 
+
 /*-- //blog --*/
 
+
 /* single page */
+
 .courses_list li a {
     color: #666;
     margin: 0 14px;
@@ -1033,7 +1052,9 @@ ul.blog-icons span {
     color: #000;
 }
 
+
 /* comments */
+
 .comments-grid-right ul li {
     display: inline-block;
     color: #888;
@@ -1053,7 +1074,9 @@ ul.blog-icons span {
     text-transform: capitalize;
 }
 
+
 /* //comments */
+
 .leave-coment-form input[type="text"],
 .leave-coment-form input[type="email"],
 .leave-coment-form textarea {
@@ -1098,8 +1121,12 @@ ul.blog-icons span {
     text-transform: uppercase;
 }
 
+
 /* //single page */
+
+
 /* right side */
+
 .bottom-slider,
 .main-content-w3layouts-w3its {
     padding: 5em 0;
@@ -1113,7 +1140,9 @@ section.bottom-slider {
     width: 100%;
 }
 
+
 /* event */
+
 .posts-grid-right h4 {
     line-height: 20px;
 }
@@ -1144,9 +1173,12 @@ ul.w3-pvt_courses_events_list li span {
     font-weight: 600;
 }
 
+
 /* //event */
 
+
 /* tags */
+
 .tags ul li {
     display: inline-block;
 }
@@ -1165,8 +1197,12 @@ ul.w3-pvt_courses_events_list li span {
     border: 1px solid #0042de;
 }
 
+
 /* //tags */
+
+
 /* //right side */
+
 .courses_w3icon span {
     font-size: 14px;
     color: #000;
@@ -1177,7 +1213,9 @@ ul.w3-pvt_courses_events_list li span {
     color: #777;
 }
 
+
 /* button */
+
 a.w3ls-button2 {
     background: #0042de;
     padding: 12px 20px;
@@ -1193,7 +1231,9 @@ a.w3ls-button2:hover {
     background: #000;
 }
 
+
 /* //button */
+
 .tab-content.tab-pane {
     display: none;
 }
@@ -1329,7 +1369,9 @@ ul.courses_list_btm li:last-child {
     background: #000;
 }
 
+
 /* Categories */
+
 .categories ul li,
 .single-left2-left ul li {
     list-style-type: none;
@@ -1354,8 +1396,12 @@ ul.courses_list_btm li:last-child {
     color: #555;
 }
 
+
 /* //Categories */
+
+
 /* search */
+
 .event-right input[type="search"] {
     padding: 10px;
     width: 100%;
@@ -1369,8 +1415,12 @@ ul.courses_list_btm li:last-child {
     font-weight: 600;
 }
 
+
 /* //search */
+
+
 /* courses right title */
+
 h3.courses-title {
     font-size: 1.4em;
     color: #0066b2;
@@ -1378,8 +1428,12 @@ h3.courses-title {
     letter-spacing: 1px;
 }
 
+
 /*// courses right title */
+
+
 /* event */
+
 .posts-grid-right h4 {
     line-height: 20px;
 }
@@ -1402,7 +1456,9 @@ ul.w3-pvt_courses_events_list li span {
     color: #bfbcbc;
 }
 
+
 /* left side */
+
 h6.courses-first {
     font-weight: 400;
     font-size: 16px;
@@ -1432,11 +1488,13 @@ ul.courses_list.my-3 li {
     width: 30%;
 }
 
+
 /* //left side */
 
-/* responsive */
-@media screen and (max-width: 1080px) {
 
+/* responsive */
+
+@media screen and (max-width: 1080px) {
     .categories ul li a,
     .single-left2-left ul li a {
         font-size: 1em;
@@ -1447,24 +1505,19 @@ ul.courses_list.my-3 li {
     h5.card-title a {
         font-size: 14px;
     }
-
     .admin p span {
         font-size: 17px;
     }
-
     .tags ul li a.text-bl {
         padding: 4px 7px;
         font-size: 14px;
     }
-
     .single-left1 h5 {
         font-size: 1.1em;
     }
-
     .comments-grid-right h4 {
         font-size: 20px;
     }
-
     .comments-grid-right ul li {
         font-size: 13px;
     }
@@ -1474,7 +1527,6 @@ ul.courses_list.my-3 li {
     .media {
         display: block;
     }
-
     .admin p {
         font-size: 13px;
     }
@@ -1486,8 +1538,12 @@ ul.courses_list.my-3 li {
     }
 }
 
+
 /* //responsive */
+
+
 /*-- /contact --*/
+
 .map-w3-pvt iframe {
     min-height: 20em;
     border: none;
@@ -1509,6 +1565,19 @@ ul.courses_list.my-3 li {
 }
 
 .form-group input {
+    outline: none;
+    padding: 16px 20px;
+    color: #333;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: 100%;
+    border: 1px solid #ddd;
+    text-align: left;
+    background: #F9FAFF;
+}
+
+.form-group select {
     outline: none;
     padding: 16px 20px;
     color: #333;
@@ -1544,10 +1613,16 @@ ul.courses_list.my-3 li {
     background: #F9FAFF;
 }
 
+
 /*-- //contact --*/
+
+
 /*-- /single --*/
 
+
 /*-- //single --*/
+
+
 /*-- footer --*/
 
 .copy-right {
@@ -1580,7 +1655,6 @@ hr {
 
 .footer-content h2 a span {
     color: #ffc107;
-
     vertical-align: middle;
 }
 
@@ -1612,6 +1686,7 @@ hr {
     width: 100%;
 }
 
+
 /*--placeholder-color--*/
 
 .con-gd ::-webkit-input-placeholder {
@@ -1632,7 +1707,10 @@ hr {
     color: #777;
 }
 
+
 /*--//placeholder-color--*/
+
+
 /* footer grids */
 
 ul.list-info-wthree {
@@ -1642,7 +1720,6 @@ ul.list-info-wthree {
 ul.list-info-wthree li {
     list-style: none;
     margin: 0.8em 0;
-
 }
 
 h4.footer-title {
@@ -1730,7 +1807,9 @@ ul.list-info-wthree span {
     font-size: 1.5em;
 }
 
+
 /* //footer */
+
 
 /* copyright */
 
@@ -1745,6 +1824,7 @@ p.copy-right-grids a {
 
 
 /* //copyright */
+
 .move-top {
     margin-top: 1.2em;
 }
@@ -1763,10 +1843,15 @@ a.move-top span {
     border-radius: 5px;
 }
 
-/*-- //footer --*/
+
 /*-- //footer --*/
 
+
+/*-- //footer --*/
+
+
 /*-- to-top --*/
+
 a.move-top span {
     color: #212529;
     text-align: center;
@@ -1774,13 +1859,13 @@ a.move-top span {
     line-height: 2em;
 }
 
+
 /*-- //to-top --*/
 
 
 /*-- Responsive design --*/
 
 @media screen and (max-width:1450px) {
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -1788,32 +1873,26 @@ a.move-top span {
     .overlay.sec {
         min-height: 48em;
     }
-
     .banner-info h3 {
         font-size: 4.5em;
     }
 }
 
 @media screen and (max-width:1366px) {
-
     h3.title-w3ls,
     h3.title-w3ls.two,
     h4.tittle {
         font-size: 2.5em;
     }
-
     .banner-info h3 {
         font-size: 4em;
     }
-
     .prodct1 h4 {
         font-size: 1em;
     }
-
     .serve-grid {
         padding: 2.5em 1em;
     }
-
     .page-w3pvt-inner,
     .overlay-innerpage {
         min-height: 18em;
@@ -1821,7 +1900,6 @@ a.move-top span {
 }
 
 @media screen and (max-width: 1280px) {
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -1829,22 +1907,18 @@ a.move-top span {
     .overlay.sec {
         min-height: 45em;
     }
-
     .banner-info {
         padding-top: 17em;
     }
-
     nav a {
         letter-spacing: 1px;
         font-size: 0.9em;
         padding: 0.5rem;
         margin: 0px 0.5em;
     }
-
     .prodct1 {
         padding: 3em 1em;
     }
-
     #logo a {
         float: left;
         font-size: 1em;
@@ -1855,26 +1929,21 @@ a.move-top span {
     .serve-grid p {
         font-size: 0.9em;
     }
-
     p.news-para {
         font-size: 1em;
     }
-
     .page-w3pvt-inner,
     .overlay-innerpage {
         min-height: 16em;
     }
-
     h3.title-w3ls,
     h3.title-w3ls.two,
     h4.tittle {
         font-size: 2.3em;
     }
-
     .bottom-grids h4 {
         font-size: 1.2em;
     }
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -1882,20 +1951,16 @@ a.move-top span {
     .overlay.sec {
         min-height: 40em;
     }
-
     .banner-info h3 {
         font-size: 3.5em;
     }
-
     .banner-info {
         padding-top: 14em;
     }
-
     .w3pvt-bg {
         padding: 1em;
         display: flex;
     }
-
     .banner-info h4 {
         letter-spacing: 2px;
         font-size: 0.9em;
@@ -1910,21 +1975,17 @@ a.move-top span {
         padding: 4em 2em;
         margin-bottom: 2em;
     }
-
     .welcome-left {
         margin-top: 3em;
     }
-
     .ab-content-inf {
         margin: 2em 0;
     }
-
     .banner-w3ls-inner {
         text-align: left;
         padding: 0em 2em;
         width: 80%;
     }
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -1932,19 +1993,15 @@ a.move-top span {
     .overlay.sec {
         min-height: 35em;
     }
-
     .subscribe-sec .btn {
         margin-top: 1em;
     }
-
     .banner-info {
         padding-top: 13em;
     }
-
     .banner-info h3 {
         font-size: 3em;
     }
-
     .page-w3pvt-inner,
     .overlay-innerpage {
         min-height: 14em;
@@ -1957,7 +2014,6 @@ a.move-top span {
         padding: 0.32em 1.5em;
         text-align: center;
     }
-
     #logo a {
         float: left;
         font-size: 0.9em;
@@ -1966,34 +2022,28 @@ a.move-top span {
 }
 
 @media screen and (max-width: 736px) {
-
     .page-w3pvt-inner,
     .overlay-innerpage {
         min-height: 12em;
     }
-
     h4.loan-vj {
         font-size: 1.2em;
     }
 }
 
 @media screen and (max-width: 640px) {
-
     h3.title-w3ls,
     h3.title-w3ls.two,
     h4.tittle {
         font-size: 2em;
     }
-
     .news-letter-w3-pvt {
         padding: 40px 40px;
     }
-
     .map-w3-pvt iframe {
         min-height: 13em;
     }
 }
-
 
 @media screen and (max-width:568px) {
     .banner-w3ls-inner {
@@ -2001,7 +2051,6 @@ a.move-top span {
         padding: 0em 2em;
         width: 95%;
     }
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -2009,29 +2058,23 @@ a.move-top span {
     .overlay.sec {
         min-height: 32em;
     }
-
     .read {
         padding: 0.6em 1em;
     }
-
     .test-info a.btn {
         padding: 9px 30px;
     }
-
     h3.title-w3ls,
     h3.title-w3ls.two,
     h4.tittle {
         font-size: 1.8em;
     }
-
     .serve-gd2 {
         margin-top: 0em;
     }
-
     .serve-gd1 {
         margin-top: 0em;
     }
-
     .prodct1 {
         padding: 2em 0em;
         margin-bottom: 2em;
@@ -2047,7 +2090,6 @@ a.move-top span {
         float: none;
         margin: 0 auto;
     }
-
     .w3pvt-bg {
         padding: 1em;
         display: flex;
@@ -2055,11 +2097,9 @@ a.move-top span {
         width: 100%;
         justify-content: center;
     }
-
     .banner-info {
         padding-top: 10em;
     }
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -2067,27 +2107,22 @@ a.move-top span {
     .overlay.sec {
         min-height: 30em;
     }
-
     .prodct1 {
         padding: 3em 1em;
         margin-bottom: 2em;
     }
-
     .serve-grid {
         padding: 2em 1em;
     }
-
     .banner-info h3 {
         font-size: 2.5em;
     }
-
     .banner-w3ls-inner {
         text-align: left;
         padding: 0em 2em;
         width: 95%;
         margin-top: 2em;
     }
-
     #logo a {
         float: left;
         font-size: 0.9em;
@@ -2101,16 +2136,13 @@ a.move-top span {
         padding: 9px 20px;
         font-size: 14px;
     }
-
     .banner-info h3 {
         font-size: 2em;
     }
-
     .banner-w3ls-inner p {
         letter-spacing: 1px;
         margin: 1em 0;
     }
-
     .banner-top,
     .banner-top1,
     .banner-top2,
@@ -2118,18 +2150,15 @@ a.move-top span {
     .overlay.sec {
         min-height: 29em;
     }
-
     h3.title-w3ls,
     h3.title-w3ls.two,
     h4.tittle {
         font-size: 1.6em;
     }
-
     .prodct1 {
         padding: 2em 0em;
         margin-bottom: 2em;
     }
-
     .form-group textarea {
         min-height: 8em;
     }
@@ -2141,28 +2170,25 @@ a.move-top span {
     .banner-info h3 {
         font-size: 1.8em;
     }
-
     .banner-w3ls-inner p {
         letter-spacing: 1px;
         margin: 1em 0;
     }
-
     h3.title-w3ls,
     h3.title-w3ls.two,
     h4.tittle {
         font-size: 1.4em;
     }
-
     .prodct1 {
         padding: 2em 0em;
         margin-bottom: 2em;
     }
-
     .prodct1 h4 {
         font-size: 0.9em;
     }
 }
 
 @media screen and (max-width:320px) {}
+
 
 /*-- //Responsive design --*/
